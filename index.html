@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Sentiment Analysis on Indian General Elections 2019</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/media-queries.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.png" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="top">
+
+   	<div class="row">
+
+   		<div class="header-content twelve columns">
+
+		      <h1 id="logo-text"><a href="index.html" title="">Sentiment Analysis on Indian General Elections 2019</a></h1>
+				<p id="intro"></p>
+
+			</div>
+
+	   </div>
+
+	   <nav id="nav-wrap">
+
+	   	<a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show Menu</a>
+		   <a class="mobile-btn" href="#" title="Hide navigation">Hide Menu</a>
+
+	   	<!--<div class="row">
+
+			   	<ul id="nav" class="nav">
+			      	<li class="current"><a href="index.html">Home</a></li>
+			      	<li class="has-children"><a href="#">Dropdown</a>
+	                  <ul>
+	                     <li><a href="#">Submenu 01</a></li>
+	                     <li><a href="#">Submenu 02</a></li>
+	                     <li><a href="#">Submenu 03</a></li>
+	                  </ul>
+	               </li>
+	               <li><a href="demo.html">Demo</a></li>
+	               <li><a href="archives.html">Archives</a></li>
+			      	<li class="has-children"><a href="single.html">Blog</a>
+							<ul>
+	                     <li><a href="blog.html">Blog Entries</a></li>
+	                     <li><a href="single.html">Single Blog</a></li>
+	                  </ul>
+			      	</li>
+			      	<li><a href="page.html">Page</a></li>
+			   	</ul> <!-- end #nav -->
+
+	   	</div>
+
+	   </nav> <!-- end #nav-wrap -->
+
+   </header> <!-- Header End -->
+
+   <!-- Content
+   ================================================== -->
+   <div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="eight columns">
+
+	   		<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">A detailed case study using the Twitter platform</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li>May 11, 2019</li>
+								<span class="meta-sep">&bull;</span>
+								<li><a href="#" title="" rel="category tag">Dr. Baghel</a></li>
+								<span class="meta-sep">&bull;</span>
+								<li>Shashi Nandan</li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>Sentiment Analysis is the process of determining whether a piece of writing is positive, negative or neutral. A sentiment analysis system for text analysis combines natural language processing (NLP) and machine learning techniques to assign weighted sentiment scores to the entities, topics, themes and categories within a sentence or phrase.
+
+						Sentiment analysis helps data analysts within large enterprises gauge public opinion, conduct nuanced market research, monitor brand and product reputation, and understand customer experiences. In addition, data analytics companies often integrate third-party sentiment analysis APIs into their own customer experience management, social media monitoring, or workforce analytics platform, in order to deliver useful insights to their own customers.</p>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Objectives of the Analysis</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li>
+									<a href="#" title="" rel="category tag"></a>,
+									<a href="#" title="" rel="category tag"></a>
+								</li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>In this study, we talk about sentiment analysis of the upcoming Loksabha Elections for the two major national parties in India which are Congress and BJP by crawling tweets from different hashtags of either parties, party leaders, as well as news hashtags like NDTV. The sentiments analysed covers different user-reactions not only restricted to positive or negative sentiments but covers an in-depth analysis of various positive and negative moods along with the results of different ML models.
+<p>
+						We categorise the analytics and research into 3 major milestones:
+<ol>
+<li>Crawling and scraping tweets in real time from Twitter using the Tweepy API and authentication using the OAuth Handler mechanism.</li>
+<li>
+Applying Natural Language Processing techniques to clean the raw tweets from smileys, emojis, special characters and punctuations thereby extracting the important features.
+</li>
+<li>Applying standard sentiment analysis techniques using the N-gram model, frequency distribution of words and identification of hate speech and popular sentiments.</li></ol>
+						</p>
+					</div>
+
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 1. Identification of popular Sentiments</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li>
+									<a href="#" title="" rel="category tag"></a>,
+									<a href="#" title="" rel="category tag"></a>
+								</li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>There are many different types of emotions that have an influence on how we live and interact with others. At times, it may seem like we are ruled by these emotions. The choices we make, the actions we take, and the perceptions we have are all influenced by the emotions we are experiencing at any given moment.</p>
+					</div>
+
+					<div class="entry-content">
+						<img src="images/s.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+				</article> <!-- end entry -->
+
+				<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 2. Visualization of all the popular emotions and sentiments</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li>
+									<a href="#" title="" rel="category tag"></a>
+								</li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p><h3>Anger</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_1.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+
+					<div class="entry-content">
+						<p><h3>Dislike</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_2.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+
+					<div class="entry-content">
+						<p><h3>Faith</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_3.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Fear</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_4.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Happiness</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_5.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Jealousy</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_6.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Negative Words</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_7.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Positive Words</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_8.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Sadness</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_9.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Shame</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/shame.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Suicidal</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_10.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+					<div class="entry-content">
+						<p><h3>Surprise</h3></p>
+					</div>
+					<div class="entry-content">
+						<img src="images/Figure_11.png" alt="Smiley face" height="200" width="800">
+
+					</div>
+
+
+				</article> <!-- end entry -->
+
+			<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 3. Understanding Twitter's word scoring algorithm</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li>
+									<a href="#" title="" rel="category tag"></a>,
+									<a href="#" title="" rel="category tag"></a>
+								</li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>Twitter is automating some processes where suspicious account activity, like exceptionally high-volume tweeting with the same hashtag, or using the same @handle without a reply from the account you’re mentioning, is flagged. The account owner has to complete a simple reCAPTCHA process or a password reset request to reclaim access to the account.
+
+</p>
+
+<div class="entry-content">
+						<img src="images/Figure_12.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+					</div>
+
+
+
+   		</div> <!-- end main -->
+
+
+				</article> <!-- end entry -->
+
+
+
+
+   		<div id="sidebar" class="four columns">
+
+   			<div class="widget widget_search">
+                  <h3>Search</h3>
+                  <form action="#">
+
+                     <input type="text" value="Search here..." onblur="if(this.value == '') { this.value = 'Search here...'; }" onfocus="if (this.value == 'Search here...') { this.value = ''; }" class="text-search">
+                     <input type="submit" value="" class="submit-search">
+
+                  </form>
+               </div>
+
+   			<div class="widget widget_categories group">
+   				<h3>Categories</h3>
+   				<ul>
+						<li><a href="#" title="">NLP</a></li>
+						<li><a href="#" title="">Sentiment Analysis</a></li>
+						<li><a href="#" title="">Machine Learning</a></li>
+						<li><a href="#" title="">Tweepy</a></li>
+						<li><a href="#" title="">N-Gram</a></li>
+						<li><a href="#" title="">Parts of Speech Tagging</a></li>
+					</ul>
+				</div>
+
+				<div class="widget widget_text group">
+					<h3>NLP </h3>
+
+   				<p>Natural language processing (NLP) is a subfield of computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.
+
+Challenges in natural language processing frequently involve speech recognition, natural language understanding, and natural language generation.</p>
+
+   			</div>
+
+   			<div class="widget widget_tags">
+               <h3>Post Tags</h3>
+
+               <div class="tagcloud group">
+                	<a href="#">GBU</a>
+                  <a href="#">NLP</a>
+                  <a href="#">Research</a>
+                  <a href="#">Indian Elections</a>
+                  <a href="#">2019</a>
+                  <a href="#">BJP</a>
+                  <a href="#">Congress</a>
+               </div>
+
+            </div>
+
+            <div class="widget widget_popular">
+               <h3></h3>
+
+               <ul class="link-list">
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+               </ul>
+
+            </div>
+
+   		</div> <!-- end sidebar -->
+
+   	</div> <!-- end row -->
+ <div id="content-wrap">
+
+   	<div class="row">
+
+   		<div id="main" class="eight columns">
+
+	   		<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 4. Identifying the location density of Twitter's users based on their tagged places</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li><a href="#" title="" rel="category tag"></a></li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>The primary conclusion that can be derived from the pie
+						chart displayed is that most of twitter's user choose to be
+					anonymous as far as the location is concerned. This anonymity
+				might guarantee free speech to certain extent and also protects the first amendment right to speak anonymously against a person, organization or the government.</p>
+				<div class="entry-content">
+						<img src="images/Figure_13.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					</div>
+
+				</article> <!-- end entry -->
+<br>
+
+<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 5. Extracting information from text and classification of sentiments</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li><a href="#" title="" rel="category tag"></a></li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>For any given question, it’s likely that someone has written the answer down somewhere. The amount of natural language text that is available in electronic form is truly
+staggering, and is increasing every day. However, the complexity of natural language
+can make it very difficult to access the information in that text. The state of the art in
+NLP is still a long way from being able to build general-purpose representations of
+meaning from unrestricted text. If we instead focus our efforts on a limited set of questions or “entity relations,” such as “where are different facilities located” or “who is
+employed by what company,” we can make significant progress.
+<p>
+The goal of this chapter is to answer the following questions:</p>
+<ol>
+	<li>
+How can we identify the mood of a voter who is a hardcore supporter of a particular political party?
+</li>
+<li>
+What are some robust methods for identifying the tweet intensity for a particular party over the years?
+</li>
+<li>
+Which corpora, libraries, or tools are appropriate for this work, and how do we identify the retweet frequency?
+</li>
+</p>
+
+				<div class="entry-content">
+					<p><b><center>Histogram of sentiments for BJP and Congress</center></b></p>
+						<img src="images/Figure_14.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+
+				<div class="entry-content">
+					<p><b><center>Dot plot representing the mood and tweet intensity for BJP</center></b></p>
+						<img src="images/Figure_15.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+
+				<div class="entry-content">
+					<p><b><center>Dot plot representing the mood and tweet intensity for Congress</center></b></p>
+						<img src="images/Figure_16.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+
+				<div class="entry-content">
+					<p><b><center>Dot plot representing the mood and tweet intensity for both the parties BJP and Congress</center></b></p>
+						<img src="images/Figure_17.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+
+				<div class="entry-content">
+					<p><b><center>Pie chart representing the sentiment distribution of retweets given to the ruling party that is BJP</center></b></p>
+						<img src="images/Figure_18.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					</div>
+
+				</article> <!-- end entry -->
+
+
+
+	   		<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 6. Understanding the online presence of the ruling party (BJP) and analysis of BJP's star campaigners and their tweets</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li><a href="#" title="" rel="category tag"></a></li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>Every political party now understands the importance of online volunteers who can tweet in the favor of a party and hijack the emotions of the normal users. Both BJP and Congress have dedicated IT cells that employ people to tweet in the favor of a particular political leader or policy.</p>
+				<div class="entry-content">
+					<p><b><center>Twitter handle of popular BJP campaigners and their most retweeted tweet</center></b></p>
+
+						<img src="images/Figure_20.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					<div class="entry-content">
+					<p><b><center>Wordcloud of the corpus that represents faith in BJP</center></b></p>
+
+						<img src="images/Figure_21.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					<div class="entry-content">
+					<p><b><center>Wordcloud of the corpus that represents fear if BJP is chosen again</center></b></p>
+
+						<img src="images/Figure_22.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					<div class="entry-content">
+					<p><b><center>Wordcloud of the corpus that represents sadness with the current government and its policies</center></b></p>
+
+						<img src="images/Figure_23.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					<div class="entry-content">
+					<p><b><center>Wordcloud of the corpus that represents joy with the current tenure of BJP</center></b></p>
+
+						<img src="images/Figure_24.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					</div>
+
+				</article> <!-- end entry -->
+
+<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 7. Understanding and implementing the N-Gram model for both the political parties</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li><a href="#" title="" rel="category tag"></a></li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>In the fields of computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sample of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles.</p>
+
+						<p>
+							An N-gram is simply a sequence of N words. For instance, let us take a look at the following examples.
+
+San Francisco (is a 2-gram)
+The Three Musketeers (is a 3-gram)
+She stood up slowly (is a 4-gram) word.
+						</p>
+						<p>
+							Now that we understand this concept, we can build with it: that’s the N-gram model. Basically, an N-gram model predicts the occurrence of a word based on the occurrence of its N – 1 previous words. So here we are answering the question – how far back in the history of a sequence of words should we go to predict the next word? For instance, a bigram model (N = 2) predicts the occurrence of a word given only its previous word (as N – 1 = 1 in this case). Similarly, a trigram model (N = 3) predicts the occurrence of a word based on its previous two words (as N – 1 = 2 in this case).
+						</p>
+				<div class="entry-content">
+					<p><b><center>Frequency of Unigram-Words for BJP</center></b></p>
+
+						<img src="images/Figure_19.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+<div class="entry-content">
+					<p><b><center>Frequency of Bigram-Words for BJP</center></b></p>
+
+						<img src="images/Figure_25.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					</div>
+
+				</article> <!-- end entry -->
+
+<article class="entry">
+
+					<header class="entry-header">
+
+						<h2 class="entry-title">
+							<a href="single.html" title="">Part 8. Natural Language Understanding and Parts  of Speech Tagging</a>
+						</h2>
+
+						<div class="entry-meta">
+							<ul>
+								<li></li>
+								<span class="meta-sep"></span>
+								<li><a href="#" title="" rel="category tag"></a></li>
+								<span class="meta-sep"></span>
+								<li></li>
+							</ul>
+						</div>
+
+					</header>
+
+					<div class="entry-content">
+						<p>In corpus linguistics, part-of-speech tagging (POS tagging or PoS tagging or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context — i.e., its relationship with adjacent and related words in a phrase, sentence, or paragraph. A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.</p>
+
+						<p>
+							Why Part-of-Speech tagging?</p>
+							<ol>
+								<li>Text to Speech Conversion</li>
+								<li>Word Sense Disambiguation</li>
+							</ol>
+							<p>
+Part-of-Speech tagging in itself may not be the solution to any particular NLP problem. It is however something that is done as a pre-requisite to simplify a lot of different problems.
+						</p>
+
+				<div class="entry-content">
+					<p><b><center>Time series analysis of parts of speech tagging for BJP</center></b></p>
+
+						<img src="images/Figure_26.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+<div class="entry-content">
+					<p><b><center>Time series analysis of parts of speech tagging for Congress</center></b></p>
+
+						<img src="images/Figure_27.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+
+<div class="entry-content">
+					<p><b><center>Time series analysis of parts of speech tagging for both BJP and Congress</center></b></p>
+
+						<img src="images/Figure_28.png" alt="Smiley face" height="200" width="600">
+
+					</div>
+
+					</div>
+
+				</article> <!-- end entry -->
+
+
+
+</div>
+<div id="sidebar" class="four columns">
+
+</div>
+</div>
+   </div> <!-- end content-wrap -->
+
+
+   <!-- Footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+      	<div class="twelve columns">
+				<ul class="social-links">
+               <li><a href="#"></a></li>
+               <li><a href="#"></i></a></li>
+               <li><a href="#"></i></a></li>
+               <li><a href="#"></i></a></li>
+               <li><a href="#"></i></a></li>
+               <li><a href="#"></i></a></li>
+               <li><a href="#"></i></a></li>
+            </ul>
+      	</div>
+
+         <div class="six columns info">
+
+            <h3>Acknowledgement</h3>
+
+            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+            nibh id elit.
+            </p>
+
+            <p>Lorem ipsum Sed nulla deserunt voluptate elit occaecat culpa cupidatat sit irure sint
+            sint incididunt cupidatat esse in Ut sed commodo tempor consequat culpa fugiat incididunt.</p>
+
+         </div>
+
+         <div class="four columns">
+
+            <h3>Photostream</h3>
+
+            <ul class="photostream group">
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+               <li><a href="#"><img alt="thumbnail" src="images/thumb.jpg"></a></li>
+            </ul>
+
+         </div>
+
+         <div class="two columns">
+            <h3 class="social"></h3>
+
+            <ul class="navigate group">
+               <li><a href="#"></a></li>
+               <li><a href="#"></a></li>
+               <li><a href="#"></a></li>
+               <li><a href="#"></a></li>
+               <li><a href="#"></a></li>
+            </ul>
+         </div>
+
+         <p class="copyright">&copy; Copyright 2019 GBU. &nbsp; Designed by <a title="Styleshout">Shashi Singh</a>.</p>
+
+      </div> <!-- End row -->
+
+      <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+
+   </footer> <!-- End Footer-->
+
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
